@@ -4,7 +4,7 @@ import React, { useEffect } from 'react';
 import { useActions } from '../hooks/useActions';
 import { useTypedSelector } from '../hooks/useTypeSelector';
 import styles from '../styles/Player.module.scss';
-import TrackProgress from './TrackProgress';
+import TrackProgress, { InputTypes } from './TrackProgress';
 
 let audio;
 
@@ -68,9 +68,9 @@ const Player = () => {
                 <div>{active?.name}</div>
                 <div style={{ fontSize: 12, color: 'gray' }}>{active?.artist}</div>
             </Grid>
-            <TrackProgress left={currentTime} right={duration} onChange={changeCurrentTime} />
+            <TrackProgress left={currentTime} right={duration} onChange={changeCurrentTime} type={InputTypes.time} />
             <VolumeUp style={{ marginLeft: 'auto' }} />
-            <TrackProgress left={volume} right={100} onChange={changeVolume} />
+            <TrackProgress left={volume} right={100} onChange={changeVolume} type={InputTypes.volume} />
         </div>
     )
 }

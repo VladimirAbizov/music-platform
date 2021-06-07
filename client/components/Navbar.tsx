@@ -52,7 +52,7 @@ export default function Navbar() {
                         <MenuIcon />
                     </IconButton>
                     <Typography variant="h6" noWrap>
-                        Persistent drawer
+                        Музыкальная площадка
           </Typography>
                 </Toolbar>
             </AppBar>
